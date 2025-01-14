@@ -199,7 +199,7 @@
         </a>
         <!-- ABA Bank -->
         <a href="https://link.payway.com.kh/aba?id=E10AF7A46388&code=487892&acc=500051774&dynamic=true" target="_blank">
-            <img src="images/Weibo.png" alt="ABAbank">
+            <img src="images/ababank.png" alt="ABAbank">
         </a>
     </div>
     <!-- Popup overlay for Tamneak -->
@@ -232,8 +232,37 @@
             document.getElementById(popupId).style.display = 'none';
         }
     </script>
-     <footer>
-        <p>&copy; 2025 [Vicheka]. All rights reserved. | <a href="https://vichekaaaaa.github.io/social_media/" target="_blank">Privacy Policy</a></p>
-    </footer>
+    <footer>
+        <p>&copy; <span id="current-date-time"></span> [Vicheka]. All rights reserved.. | 
+        <a href="https://vichekaaaaa.github.io/social_media/" target="_blank">Privacy Policy</a></p>
+    </footer>  
+    <script>
+        // Function to format the date and time
+        function updateDateTime() {
+            const now = new Date();           
+            // Options for formatting
+            const options = {
+                weekday: 'long',    // e.g., Monday
+                year: 'numeric',    // e.g., 2025
+                month: 'long',      // e.g., January
+                day: 'numeric',     // e.g., 15
+                hour: '2-digit',    // e.g., 04
+                minute: '2-digit',  // e.g., 30
+                second: '2-digit',  // e.g., 15
+                hour12: false       // 24-hour format
+            };            
+            // Format the date and time
+            const formattedDateTime = now.toLocaleDateString('en-US', options);
+            
+            // Update the footer
+            document.getElementById('current-date-time').textContent = formattedDateTime;
+        }
+        
+        // Update the date and time immediately
+        updateDateTime();
+        
+        // Optionally, you can update the time every second
+        setInterval(updateDateTime, 1000);
+    </script>    
 </body>
 </html>
