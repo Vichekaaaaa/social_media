@@ -14,49 +14,46 @@
             color: #333;
             text-align: center;
         }
-
         header {
             background-color: #068cd9;
             color: white;
             padding: 20px 0;
         }
-
         .about-me {
-            margin: 30px auto;
+            margin:1.8rem auto;
             max-width: 800px;
             line-height: 1.6;
-            padding: 20px;
-            background: rgb(220, 204, 204);
-            border-radius: 10px;
+            padding: 10px;
+            background: rgba(220, 204, 204, 0.8);
+            border-radius: 1rem;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-
         .social-media {
-            margin-top: 3opx;
+            margin-top: 1rem;
+            margin: auto;
+            max-width: 95%;
+            line-height: 1.6;
+            padding: 10px;
+            background: rgba(111, 111, 111, 0.5);
+            border-radius: 1rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-
         .social-media a {
             margin: 0 10px;
             display: inline-block;
             text-decoration: none;
         }
-
         .social-media img {
             width: 50px;
             height: 50px;
             transition: transform 0.3s;
         }
-
         .social-media img:hover {
             transform: scale(1.1);
         }
-
-       
-
         .pic {
             margin: 30px auto;
         }
-
         .pic img {
             width: 100px;
             height: auto;
@@ -64,12 +61,10 @@
         }
         .title {
             font-size: 18px;
-            color: rgb(13, 186, 255);
+            color: rgb(255, 255, 255);
             margin-top: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-           
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  
         }
-
         footer {
             background-color: #333;
             color: white;
@@ -77,14 +72,41 @@
             margin-top: 50px;
             font-size: 0.9em;
         }
-
         footer a {
             color: #4CAF50;
             text-decoration: none;
         }
-
         footer a:hover {
             text-decoration: underline;
+        }
+         /* Style for the overlay background */
+         .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        /* Style for the popup image */
+        .overlay img {
+            max-width: 80%;
+            max-height: 80%;
+            border: 5px solid white;
+            border-radius: 10px;
+        }
+        /* Close button style */
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -92,70 +114,126 @@
     <header>
         <h1>About Me</h1>
     </header>
-
     <div class="about-me">
         <p>Hi! My name is [VICHEKA]. I'm From [ Cambodia 🇰🇭], and I enjoy sharing my journey with the world. Welcome to my personal website!</p>
     </div>
-
     <div class="pic">
-        <img src="images/Photo.jpg" alt="Flag of Cambodia" style="width: 180px; height: auto;">
+        <img src="images/Profile.jpg" alt="Flag of Cambodia" style="width: 180px; height: auto;">
     </div>
 
     <div class="title">
-        <p>✦✦✦ 𝗙𝗼𝗹𝗹𝗼𝘄 𝗺𝗲╰┈➤𝖡𝗒 𝖲𝗈𝖼𝗂𝖺𝗅 𝖬𝖾𝖽𝗂𝖺 𝖡𝖾𝗅𝗈𝗐 🡻 ✦✦✦</p>
+        <p>✦✦✦ 𝗙𝗼𝗹𝗹𝗼𝘄 𝗺𝗲 𝖡𝗒 𝖲𝗈𝖼𝗂𝖺𝗅 𝖬𝖾𝖽𝗂𝖺 𝖡𝖾𝗅𝗈𝗐 🡻 ✦✦✦</p>
     </div>
-    
-
     <div class="social-media">
+        <!-- Facebook -->
         <a href="https://web.facebook.com/ny.vichekaa" target="_blank">
             <img src="https://cdn-icons-png.flaticon.com/512/145/145802.png" alt="Facebook">
         </a>
+        <!-- instagram -->
         <a href="https://www.instagram.com/ny.vichekaa" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/1409/1409946.png" alt="Instagram">
+            <img src="https://cdn-icons-png.flaticon.com/512/3955/3955024.png" alt="Instagram">
         </a>
+        <!-- LinkedIn -->
         <a href="https://www.linkedin.com/in/ny-vicheka" target="_blank">
             <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn">
         </a>
+        <!-- YouTube -->
         <a href="https://www.youtube.com/@ny_vicheka" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
+            <img src="https://cdn-icons-png.flaticon.com/512/3670/3670147.png" alt="YouTube">
         </a>
+        <!-- TikTok -->
         <a href="https://www.tiktok.com/@vichekaaaaaa" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/15713/15713399.png" alt="TikTok">
+            <img src="https://cdn-icons-png.flaticon.com/512/4782/4782345.png" alt="TikTok">
         </a>
+        <!-- Snapchat -->
         <a href="https://www.snapchat.com/add/ny_vicheka" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/1409/1409941.png" alt="Snapchat">
+            <img src="https://cdn-icons-png.flaticon.com/512/3669/3669965.png" alt="Snapchat">
         </a>
+        <!-- GitHub -->
         <a href="https://github.com/Vichekaaaaa" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/3291/3291695.png" alt="GitHub">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968896.png" alt="GitHub">
         </a>
+        <!-- Telegram -->
         <a href="https://t.me/ny_vicheka" target="_blank">
             <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram">
         </a>
+        <!-- Twitch -->
         <a href="https://www.twitch.tv/ny_vicheka" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/2504/2504946.png" alt="Twitch">
+            <img src="https://cdn-icons-png.flaticon.com/512/4494/4494567.png" alt="Twitch">
         </a>
+        <!-- Threads -->
         <a href="https://www.threads.net/@ny.vichekaa" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/12105/12105339.png" alt="Threads">
+            <img src="images/Threads.png" alt="Threads">
         </a>
+        <!-- x -->
         <a href="https://x.com/ny_vicheka" target="_blank">
             <img src="https://cdn-icons-png.flaticon.com/512/5969/5969020.png" alt="X (formerly Twitter)">
         </a>
+        <!-- WhatsApp -->
         <a href="https://wa.me/+855717944545" target="_blank">
             <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
         </a>
-        <a href="https://tamneak.com/userfeed?id=vicheka" target="_blank">
-            <img src="images/image1.png" alt="Tamneak">
+        <!-- Tamneak -->
+         <a href="javascript:void(0);" onclick="showPopup('tamneakPopup')">
+            <img src="images/Tamneak.png" alt="Tamneak">
         </a>
-        <a href="https://coolapp.chat/me/#acc/sEw68hl6R6Wj4DGGL7qWEg" target="_blank">
-            <img src="images/image2.png" alt="CoolApp">
+        <!-- CoolApp -->
+            <a href="javascript:void(0);" onclick="showPopup('coolappPopup')">
+                <img src="images/CoolApp.png" alt="CoolApp">
+            </a>
+        <!-- Wechat -->
+        <a href="javascript:void(0);" onclick="showPopup('wechatPopup')">
+            <img src="https://cdn-icons-png.flaticon.com/512/3670/3670101.png" alt="Wechat">
         </a>
+        <!-- Weibo -->
+        <a href="https://weibo.com/u/7903514757" target="_blank">
+            <img src="images/Weibo.png" alt="Weibo">
+        </a>
+        <!-- Snapkyu -->
+        <a href="javascript:void(0);" onclick="showPopup('snapkyuPopup')">
+            <img src="images/Snapkyu.png" alt="Snapkyu">
+        </a>
+        <!-- Rednote -->
+        <a href="https://www.xiaohongshu.com/user/profile/6786234f000000000801b137?xsec_token=YBIwSZyhvV5xlmv3xg7MSQSAoqFEfN4l5sf2W-RmPR2Kg=&xsec_source=app_share&xhsshare=CopyLink&appuid=6786234f000000000801b137&apptime=1736846685&share_id=895e60e32a204ec89f677bdd934eeaa2" target="_blank">
+            <img src="images/Rednote.PNG" alt="Rednote">
+        </a>
+        <!-- ABA Bank -->
         <a href="https://link.payway.com.kh/aba?id=E10AF7A46388&code=487892&acc=500051774&dynamic=true" target="_blank">
-            <img src="images/image3.png" alt="ABA bank">
+            <img src="images/ABA.png" alt="ABA bank">
         </a>
     </div>
-
-    <footer>
-        <p>&copy; 2024 [Vicheka]. All rights reserved. | <a href="https://www.vicheka.online" target="_blank">Privacy Policy</a></p>
+    <!-- Popup overlay for Tamneak -->
+     <div class="overlay" id="tamneakPopup">
+    <span class="close-btn" onclick="hidePopup('tamneakPopup')">&times;</span>
+    <img src="images/QRTamneak.jpg" alt="QR Tamneak">
+    </div>
+    <!-- Popup overlay for CoolApp -->
+    <div class="overlay" id="coolappPopup">
+        <span class="close-btn" onclick="hidePopup('coolappPopup')">&times;</span>
+        <img src="images/QPCoolApp.jpg" alt="QR CoolApp">
+        </div>
+    <!-- Popup overlay for WeChat -->
+     <div class="overlay" id="wechatPopup">
+    <span class="close-btn" onclick="hidePopup('wechatPopup')">&times;</span>
+    <img src="images/QRwechat.jpg" alt="QR Wechat">
+    </div>
+    <!-- Popup overlay for Snapkyu -->
+    <div class="overlay" id="snapkyuPopup">
+        <span class="close-btn" onclick="hidePopup('snapkyuPopup')">&times;</span>
+        <img src="images/QRSnapkyu.jpg" alt="QR Snapkyu">
+    </div>
+    <script>
+        // Function to show the popup
+        function showPopup(popupId) {
+            document.getElementById(popupId).style.display = 'flex';
+        }   
+        // Function to hide the popup
+        function hidePopup(popupId) {
+            document.getElementById(popupId).style.display = 'none';
+        }
+    </script>
+     <footer>
+        <p>&copy; 2025 [Vicheka]. All rights reserved. | <a href="https://vichekaaaaa.github.io/social_media/" target="_blank">Privacy Policy</a></p>
     </footer>
 </body>
 </html>
