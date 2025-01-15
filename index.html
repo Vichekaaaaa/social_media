@@ -15,7 +15,7 @@
             text-align: center;
         }
         header {
-            background-color: #068cd9;
+            background-color: rgba(6, 140, 217, 0.8);
             color: white;
             padding: 1px 0;
         }
@@ -52,7 +52,7 @@
             transform: scale(1.1);
         }
         .pic {
-            margin: 30px auto;
+            margin: 10px auto;
         }
         .pic img {
             width: 100px;
@@ -60,16 +60,15 @@
             border-radius: 1rem;
         }
         .title {
-            font-size: 18px;
+            font-size: 20px;
             color: rgb(255, 255, 255);
-            margin-top: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);  
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);  
         }
         footer {
-            background-color: #333;
+            background-color:rgba(51, 51, 51, 0.8)            ;
             color: white;
             padding: 10px 0;
-            margin-top: 39px;
+            margin-top: 34px;
             font-size: 0.9em;
         }
         footer a {
@@ -108,52 +107,35 @@
             color: white;
             cursor: pointer;
         }
-        .language-switcher {
-            margin: 20px;
-        }
-        select {
-            padding: 5px 10px;
-            background-color: white;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        option {
-            display: flex;
-            align-items: center;
-        }
-        option img {
-            width: 20px;
-            margin-right: 8px;
-        }
     </style>
 </head>
 <body>
     <header>
-        <h1 id="title">About Me</h1>
-        <div class="language-switcher">
-            <label for="language-select">Choose Language: </label>
-            <select id="language-select" onchange="switchLanguage()">
-                <option value="en">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg" alt="English Flag"> English
-                </option>
-                <option value="km">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Flag_of_Cambodia.svg" alt="Cambodia Flag"> Khmer (ភាសាខ្មែរ)
-                </option>
-            </select>
-        </div>
+        <h1>𝐍𝐘 𝐕𝐈𝐂𝐇𝐄𝐊𝐀</h1>
     </header>
     <div class="about-me">  
-        <p id="content">Hi! My name is [VICHEKA]. I'm From [ Cambodia 🇰🇭], and I enjoy sharing my journey with the world. Welcome to my personal website!</p>
+        <p >Hi! My name is [VICHEKA]. I'm From [ Cambodia 🇰🇭], and I enjoy sharing my journey with the world. <br>Welcome to my personal website!</p>
     </div>
     <div class="pic">
         <img src="images/Profile.jpg" alt="Flag of Cambodia" style="width: 180px; height: auto;">
     </div>
 
     <div class="title">
-        <p id="content2">✦✦✦ 𝗙𝗼𝗹𝗹𝗼𝘄 𝗺𝗲 𝖡𝗒 𝖲𝗈𝖼𝗂𝖺𝗅 𝖬𝖾𝖽𝗂𝖺 𝖡𝖾𝗅𝗈𝗐 ✦✦✦</p>
+        <p >✦✦✦ 𝗖𝗼𝗻𝘁𝗮𝗰𝘁𝘀 𝗠𝗲 𝗕𝘆 𝗦𝗼𝗰𝗮𝗶𝗹 𝗠𝗲𝗱𝗶𝗮 𝗕𝗲𝗹𝗼𝘄 ✦✦✦</p>
     </div>
     <div class="social-media">
+         <!-- LinkedIn -->
+         <a href="https://www.linkedin.com/in/ny-vicheka" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn">
+        </a>
+        <!-- GitHub -->
+        <a href="https://github.com/Vichekaaaaa" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968896.png" alt="GitHub">
+        </a>
+        <!-- Telegram -->
+        <a href="https://t.me/ny_vicheka" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram">
+        </a>
         <!-- Facebook -->
         <a href="https://web.facebook.com/ny.vichekaa" target="_blank">
             <img src="https://cdn-icons-png.flaticon.com/512/145/145802.png" alt="Facebook">
@@ -161,10 +143,6 @@
         <!-- instagram -->
         <a href="https://www.instagram.com/ny.vichekaa" target="_blank">
             <img src="https://cdn-icons-png.flaticon.com/512/3955/3955024.png" alt="Instagram">
-        </a>
-        <!-- LinkedIn -->
-        <a href="https://www.linkedin.com/in/ny-vicheka" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn">
         </a>
         <!-- YouTube -->
         <a href="https://www.youtube.com/@ny_vicheka" target="_blank">
@@ -177,14 +155,6 @@
         <!-- Snapchat -->
         <a href="https://www.snapchat.com/add/ny_vicheka" target="_blank">
             <img src="https://cdn-icons-png.flaticon.com/512/3669/3669965.png" alt="Snapchat">
-        </a>
-        <!-- GitHub -->
-        <a href="https://github.com/Vichekaaaaa" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968896.png" alt="GitHub">
-        </a>
-        <!-- Telegram -->
-        <a href="https://t.me/ny_vicheka" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram">
         </a>
         <!-- Twitch -->
         <a href="https://www.twitch.tv/ny_vicheka" target="_blank">
@@ -213,6 +183,10 @@
         <!-- Wechat -->
         <a href="javascript:void(0);" onclick="showPopup('wechatPopup')">
             <img src="https://cdn-icons-png.flaticon.com/512/3670/3670101.png" alt="Wechat">
+        </a>
+        <!-- Line -->
+        <a href="javascript:void(0);" onclick="showPopup('linePopup')">
+            <img src="https://cdn-icons-png.flaticon.com/512/3670/3670089.png" alt="Line">
         </a>
         <!-- Weibo -->
         <a href="https://weibo.com/u/7903514757" target="_blank">
@@ -246,6 +220,11 @@
     <span class="close-btn" onclick="hidePopup('wechatPopup')">&times;</span>
     <img src="images/QRwechat.jpg" alt="QR Wechat">
     </div>
+    <!-- Popup overlay for Line -->
+    <div class="overlay" id="linePopup">
+        <span class="close-btn" onclick="hidePopup('linePopup')">&times;</span>
+        <img src="images/QRLine.jpg" alt="QR Line">
+        </div>
     <!-- Popup overlay for Snapkyu -->
     <div class="overlay" id="snapkyuPopup">
         <span class="close-btn" onclick="hidePopup('snapkyuPopup')">&times;</span>
@@ -286,29 +265,6 @@
     updateDateTime();    
     // Optionally, update the time every second
     setInterval(updateDateTime, 1000);
-</script>
-<script>
-    // Language content
-    const translations = {
-        en: {
-            title: "About Me",
-            content: "Hi! My name is [VICHEKA]. I'm From [ Cambodia 🇰🇭], and I enjoy sharing my journey with the world. Welcome to my personal website!",
-            content2: "✦✦✦ 𝗙𝗼𝗹𝗹𝗼𝘄 𝗺𝗲 𝖡𝗒 𝖲𝗈𝖼𝗂𝖺𝗅 𝖬𝖾𝖽𝗂𝖺 𝖡𝖾𝗅𝗈𝗐 ✦✦✦",
-        },
-        km: {
-            title: "អំពីខ្ញុំ",
-            content: "សួស្តី! ខ្ញុំឈ្មោះ [វិច្ឆិកា]។ ខ្ញុំមកពី [កម្ពុជា 🇰🇭] ហើយខ្ញុំរីករាយក្នុងការចែករំលែកដំណើររបស់ខ្ញុំទៅកាន់ពិភពលោក។ សូមស្វាគមន៍មកកាន់គេហទំព័រផ្ទាល់ខ្លួនរបស់ខ្ញុំ!",
-            content2: "✦ តាមដានខ្ញុំបន្ថែមតាមរយៈបណ្តាញសង្គមខាងក្រោម ✦",
-        },
-    };
-    // Function to switch language
-    function switchLanguage() {
-        const selectedLanguage = document.getElementById("language-select").value;
-        document.getElementById("title").innerHTML = translations[selectedLanguage].title;
-        document.getElementById("content").innerHTML = translations[selectedLanguage].content;
-        document.getElementById("content2").innerHTML = translations[selectedLanguage].content2;
-    
-    }
 </script>
 </body>
 </html>
