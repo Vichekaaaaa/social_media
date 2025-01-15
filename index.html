@@ -17,7 +17,7 @@
         header {
             background-color: #068cd9;
             color: white;
-            padding: 20px 0;
+            padding: 1px 0;
         }
         .about-me {
             margin:1.8rem auto;
@@ -63,13 +63,13 @@
             font-size: 18px;
             color: rgb(255, 255, 255);
             margin-top: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);  
         }
         footer {
             background-color: #333;
             color: white;
             padding: 10px 0;
-            margin-top: 50px;
+            margin-top: 39px;
             font-size: 0.9em;
         }
         footer a {
@@ -108,21 +108,50 @@
             color: white;
             cursor: pointer;
         }
+        .language-switcher {
+            margin: 20px;
+        }
+        select {
+            padding: 5px 10px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        option {
+            display: flex;
+            align-items: center;
+        }
+        option img {
+            width: 20px;
+            margin-right: 8px;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>About Me</h1>
+        <h1 id="title">About Me</h1>
+        <div class="language-switcher">
+            <label for="language-select">Choose Language: </label>
+            <select id="language-select" onchange="switchLanguage()">
+                <option value="en">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg" alt="English Flag"> English
+                </option>
+                <option value="km">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Flag_of_Cambodia.svg" alt="Cambodia Flag"> Khmer (ភាសាខ្មែរ)
+                </option>
+            </select>
+        </div>
     </header>
-    <div class="about-me">
-        <p>Hi! My name is [VICHEKA]. I'm From [ Cambodia 🇰🇭], and I enjoy sharing my journey with the world. Welcome to my personal website!</p>
+    <div class="about-me">  
+        <p id="content">Hi! My name is [VICHEKA]. I'm From [ Cambodia 🇰🇭], and I enjoy sharing my journey with the world. Welcome to my personal website!</p>
     </div>
     <div class="pic">
         <img src="images/Profile.jpg" alt="Flag of Cambodia" style="width: 180px; height: auto;">
     </div>
 
     <div class="title">
-        <p>✦✦✦ 𝗙𝗼𝗹𝗹𝗼𝘄 𝗺𝗲 𝖡𝗒 𝖲𝗈𝖼𝗂𝖺𝗅 𝖬𝖾𝖽𝗂𝖺 𝖡𝖾𝗅𝗈𝗐 🡻 ✦✦✦</p>
+        <p id="content2">✦✦✦ 𝗙𝗼𝗹𝗹𝗼𝘄 𝗺𝗲 𝖡𝗒 𝖲𝗈𝖼𝗂𝖺𝗅 𝖬𝖾𝖽𝗂𝖺 𝖡𝖾𝗅𝗈𝗐 ✦✦✦</p>
     </div>
     <div class="social-media">
         <!-- Facebook -->
@@ -232,37 +261,54 @@
             document.getElementById(popupId).style.display = 'none';
         }
     </script>
-    <footer>
-        <p>&copy; <span id="current-date-time"></span> [Vicheka]. All rights reserved.. | 
-        <a href="https://vichekaaaaa.github.io/social_media/" target="_blank">Privacy Policy</a></p>
-    </footer>  
-    <script>
-        // Function to format the date and time
-        function updateDateTime() {
-            const now = new Date();           
-            // Options for formatting
-            const options = {
-                weekday: 'long',    // e.g., Monday
-                year: 'numeric',    // e.g., 2025
-                month: 'long',      // e.g., January
-                day: 'numeric',     // e.g., 15
-                hour: '2-digit',    // e.g., 04
-                minute: '2-digit',  // e.g., 30
-                second: '2-digit',  // e.g., 15
-                hour12: false       // 24-hour format
-            };            
-            // Format the date and time
-            const formattedDateTime = now.toLocaleDateString('en-US', options);
-            
-            // Update the footer
-            document.getElementById('current-date-time').textContent = formattedDateTime;
-        }
-        
-        // Update the date and time immediately
-        updateDateTime();
-        
-        // Optionally, you can update the time every second
-        setInterval(updateDateTime, 1000);
-    </script>    
+   <footer>
+    <p id="footer-text">&copy; <span id="current-date-time"></span> [Vicheka]. All rights reserved. | 
+    <a href="https://vichekaaaaa.github.io/social_media/" target="_blank">Privacy Policy</a></p>
+</footer>  
+<script>
+    // Function to format the date and time
+    function updateDateTime() {
+        const now = new Date();
+        // Extract components
+        const day = String(now.getDate()).padStart(2, '0'); // Add leading zero for day
+        const weekday = now.toLocaleDateString('en-US', { weekday: 'long' }); // Get full weekday name
+        const month = now.toLocaleDateString('en-US', { month: 'long' }); // Get full month name
+        const year = now.getFullYear(); // Get the full year
+        const hours = String(now.getHours()).padStart(2, '0'); // Add leading zero for hours
+        const minutes = String(now.getMinutes()).padStart(2, '0'); // Add leading zero for minutes
+        const seconds = String(now.getSeconds()).padStart(2, '0'); // Add leading zero for seconds
+        // Format as "© dd-Wednesday-Month-Year HH:MM:SS"
+        const formattedDateTime = ` ${day}, ${weekday}, ${month}, ${year} at ${hours}:${minutes}:${seconds}`;   
+        // Update the footer
+        document.getElementById('current-date-time').textContent = formattedDateTime;
+    } 
+    // Update the date and time immediately
+    updateDateTime();    
+    // Optionally, update the time every second
+    setInterval(updateDateTime, 1000);
+</script>
+<script>
+    // Language content
+    const translations = {
+        en: {
+            title: "About Me",
+            content: "Hi! My name is [VICHEKA]. I'm From [ Cambodia 🇰🇭], and I enjoy sharing my journey with the world. Welcome to my personal website!",
+            content2: "✦✦✦ 𝗙𝗼𝗹𝗹𝗼𝘄 𝗺𝗲 𝖡𝗒 𝖲𝗈𝖼𝗂𝖺𝗅 𝖬𝖾𝖽𝗂𝖺 𝖡𝖾𝗅𝗈𝗐 ✦✦✦",
+        },
+        km: {
+            title: "អំពីខ្ញុំ",
+            content: "សួស្តី! ខ្ញុំឈ្មោះ [វិច្ឆិកា]។ ខ្ញុំមកពី [កម្ពុជា 🇰🇭] ហើយខ្ញុំរីករាយក្នុងការចែករំលែកដំណើររបស់ខ្ញុំទៅកាន់ពិភពលោក។ សូមស្វាគមន៍មកកាន់គេហទំព័រផ្ទាល់ខ្លួនរបស់ខ្ញុំ!",
+            content2: "✦ តាមដានខ្ញុំបន្ថែមតាមរយៈបណ្តាញសង្គមខាងក្រោម ✦",
+        },
+    };
+    // Function to switch language
+    function switchLanguage() {
+        const selectedLanguage = document.getElementById("language-select").value;
+        document.getElementById("title").innerHTML = translations[selectedLanguage].title;
+        document.getElementById("content").innerHTML = translations[selectedLanguage].content;
+        document.getElementById("content2").innerHTML = translations[selectedLanguage].content2;
+    
+    }
+</script>
 </body>
 </html>
