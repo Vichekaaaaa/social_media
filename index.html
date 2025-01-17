@@ -107,6 +107,60 @@
             color: white;
             cursor: pointer;
         }
+        .contact-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .contact-link, .share-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-decoration: none;
+        cursor: pointer;
+        border: none;
+        background: none;
+        outline: none;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .contact-link:hover, .share-btn:hover {
+        transform: scale(1.1);
+    }
+
+    .icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .share-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: #4CAF50; /* Green button color */
+        border-radius: 50px;
+        padding: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        color: white;
+        font-weight: bold;
+        font-size: 14px;
+        border: none;
+        transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+    }
+
+    .share-btn:hover {
+        background-color: #45a049; /* Slightly darker green on hover */
+    }
+
+    .share-text {
+        margin-top: 5px;
+        color: white;
+        font-size: 12px;
+    }
     </style>
 </head>
 <body>
@@ -118,6 +172,41 @@
     </div>
     <div class="pic">
         <img src="images/Profile.jpg" alt="Flag of Cambodia" style="width: 180px; height: auto;">
+    </div>
+
+    <div class="contact-buttons">
+        <!-- Email Button -->
+        <a href="mailto:nyvicheka855@gmail.com" class="contact-link">
+            <img src="https://cdn-icons-png.flaticon.com/512/3178/3178158.png" alt="Email Icon" class="icon">
+        </a>
+        <!-- Phone Button -->
+        <a href="tel:+855717944545" class="contact-link">
+            <img src="https://cdn-icons-png.flaticon.com/512/455/455705.png" alt="Phone Icon" class="icon">
+        </a>
+        <!-- Banks -->
+        <a href="#" class="contact-link" onclick="showMoreImages(event)">
+            <img src="https://cdn-icons-png.flaticon.com/512/3635/3635987.png
+            " alt="Bank Icon" class="icon">
+        </a>
+        <!-- Additional Bank Icons (Initially hidden) -->
+        <div id="moreBankIcons" style="display:none;">
+           <!-- ABA Bank -->
+            <a href="https://link.payway.com.kh/aba?id=E10AF7A46388&code=487892&acc=500051774&dynamic=true" target="_blank" class="contact-link">
+                <img src="images/ababank.png" alt="ABA Bank Icon" class="icon">
+           </a>
+           <!-- Aceleda Bank -->
+            <a href="https://acledabank.com.kh/acleda?payment_data=qWY5B2SAUfIhLblxzOtfu9xpNZXjX5tW/pa+0dwMoeZ0ovJ48vfMQ0SJyYZR239D2NcAxvvAU/18JdvBoTNd2RHcHzDIb2FQnn/1m1j4gqjUsv6HbJXlRQW7KVaZD2QXM48WWIBC7YzXocFFke+E392RoYP7S0udDWqfWTeXROc1FNUTMoTlRXdRVc3bPcGA+n1K5sRKss9YcnYCTtk83/PsZDWSQOweKXe94P6r3N9o6b86FvHKr0jKQEgrE56y&key=khqr" target="_blank" class="contact-link">
+                <img src="images/Aceleda.png" alt="Aceleda Bank Icon 3" class="icon">
+            </a>
+            <a href="https://wingmoney.app.link/hPKEldiIeQb" target="_blank" class="contact-link">
+                <img src="images/wing.PNG" alt="Bank Icon 4" class="icon">
+            </a>
+        </div>
+        <!-- Share Button -->
+        <button onclick="shareLink()" class="contact-link">
+            <img src="https://cdn-icons-png.flaticon.com/512/2958/2958791.png" alt="Share Icon" class="icon">
+        </button>
+        
     </div>
 
     <div class="title">
@@ -200,10 +289,6 @@
         <a href="https://www.xiaohongshu.com/user/profile/6786234f000000000801b137?xsec_token=YBIwSZyhvV5xlmv3xg7MSQSAoqFEfN4l5sf2W-RmPR2Kg=&xsec_source=app_share&xhsshare=CopyLink&appuid=6786234f000000000801b137&apptime=1736846685&share_id=895e60e32a204ec89f677bdd934eeaa2" target="_blank">
             <img src="images/Rednote.PNG" alt="Rednote">
         </a>
-        <!-- ABA Bank -->
-        <a href="https://link.payway.com.kh/aba?id=E10AF7A46388&code=487892&acc=500051774&dynamic=true" target="_blank">
-            <img src="images/ababank.png" alt="ABAbank">
-        </a>
     </div>
     <!-- Popup overlay for Tamneak -->
      <div class="overlay" id="tamneakPopup">
@@ -265,6 +350,39 @@
     updateDateTime();    
     // Optionally, update the time every second
     setInterval(updateDateTime, 1000);
+</script>
+
+<script>
+    function shareLink() {
+        const shareData = {
+            title: 'Check out my website!',
+            text: 'Hi, visit my personal website for more information!',
+            url: 'https://vichekaaaaa.github.io/social_media/'
+        };
+
+        if (navigator.share) {
+            navigator.share(shareData)
+                .then(() => console.log('Successfully shared'))
+                .catch((err) => console.error('Error sharing:', err));
+        } else {
+            navigator.clipboard.writeText(shareData.url)
+                .then(() => alert('Link copied to clipboard!'))
+                .catch((err) => console.error('Failed to copy:', err));
+        }
+    }
+</script>
+<script>
+    function showMoreImages(event) {
+        event.preventDefault(); // Prevent the default action (i.e., clicking the first link)
+        var moreIcons = document.getElementById("moreBankIcons");
+        
+        // Toggle the visibility of additional icons
+        if (moreIcons.style.display === "none") {
+            moreIcons.style.display = "block";  // Show the additional bank icons
+        } else {
+            moreIcons.style.display = "none";   // Hide the additional bank icons
+        }
+    }
 </script>
 </body>
 </html>
