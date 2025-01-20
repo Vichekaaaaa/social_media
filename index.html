@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -206,11 +207,9 @@
         <button onclick="shareLink()" class="contact-link">
             <img src="https://cdn-icons-png.flaticon.com/512/2958/2958791.png" alt="Share Icon" class="icon">
         </button>
-        
     </div>
-
     <div class="title">
-        <p >✦✦✦ 𝗖𝗼𝗻𝘁𝗮𝗰𝘁𝘀 𝗠𝗲 𝗕𝘆 𝗦𝗼𝗰𝗮𝗶𝗹 𝗠𝗲𝗱𝗶𝗮 𝗕𝗲𝗹𝗼𝘄 ✦✦✦</p>
+        <p >✦ 𝗖𝗼𝗻𝘁𝗮𝗰𝘁𝘀 𝗠𝗲 𝗕𝘆 𝗦𝗼𝗰𝗮𝗶𝗹 𝗠𝗲𝗱𝗶𝗮 𝗕𝗲𝗹𝗼𝘄 ✦</p>
     </div>
     <div class="social-media">
          <!-- LinkedIn -->
@@ -290,6 +289,9 @@
             <img src="images/Rednote.PNG" alt="Rednote">
         </a>
     </div>
+    <!-- <div id="view-counter">
+        <i class="fas fa-eye"></i> <span id="view-count">0</span>
+    </div> -->
     <!-- Popup overlay for Tamneak -->
      <div class="overlay" id="tamneakPopup">
     <span class="close-btn" onclick="hidePopup('tamneakPopup')">&times;</span>
@@ -314,21 +316,22 @@
     <div class="overlay" id="snapkyuPopup">
         <span class="close-btn" onclick="hidePopup('snapkyuPopup')">&times;</span>
         <img src="images/QRSnapkyu.jpg" alt="QR Snapkyu">
+    </div>    
     </div>
-    <script>
-        // Function to show the popup
-        function showPopup(popupId) {
-            document.getElementById(popupId).style.display = 'flex';
-        }   
-        // Function to hide the popup
-        function hidePopup(popupId) {
-            document.getElementById(popupId).style.display = 'none';
-        }
-    </script>
    <footer>
-    <p id="footer-text">&copy; <span id="current-date-time"></span> [Vicheka]. All rights reserved. | 
-    <a href="https://vichekaaaaa.github.io/social_media/" target="_blank">Privacy Policy</a></p>
+    <p id="footer-text">&copy;<span id="current-date-time"></span> [Vicheka]. All rights reserved. | 
+    <a href="https://vichekaaaaa.github.io/social_media/" target="_blank">Privacy Policy</a>. |<i class="fas fa-eye"></i> <span id="view-count">0</span></p>
 </footer>  
+<script>
+    // Function to show the popup
+    function showPopup(popupId) {
+        document.getElementById(popupId).style.display = 'flex';
+    }   
+    // Function to hide the popup
+    function hidePopup(popupId) {
+        document.getElementById(popupId).style.display = 'none';
+    }
+</script>
 <script>
     // Function to format the date and time
     function updateDateTime() {
@@ -351,7 +354,6 @@
     // Optionally, update the time every second
     setInterval(updateDateTime, 1000);
 </script>
-
 <script>
     function shareLink() {
         const shareData = {
@@ -359,7 +361,6 @@
             text: 'Hi, visit my personal website for more information!',
             url: 'https://vichekaaaaa.github.io/social_media/'
         };
-
         if (navigator.share) {
             navigator.share(shareData)
                 .then(() => console.log('Successfully shared'))
@@ -375,7 +376,6 @@
     function showMoreImages(event) {
         event.preventDefault(); // Prevent the default action (i.e., clicking the first link)
         var moreIcons = document.getElementById("moreBankIcons");
-        
         // Toggle the visibility of additional icons
         if (moreIcons.style.display === "none") {
             moreIcons.style.display = "block";  // Show the additional bank icons
@@ -383,6 +383,26 @@
             moreIcons.style.display = "none";   // Hide the additional bank icons
         }
     }
+</script>
+<script>
+    // Function to update the view counter
+    function updateViewCount() {
+        // Get the view count from localStorage
+        let viewCount = localStorage.getItem('viewCount');
+        // Initialize viewCount if not already set
+        if (!viewCount) {
+            viewCount = 0;
+        }
+        // Increment view count
+        viewCount = parseInt(viewCount) + 1;
+        localStorage.setItem('viewCount', viewCount);
+
+        // Update the displayed count
+        const viewCountElement = document.getElementById('view-count');
+        viewCountElement.textContent = viewCount;
+    }
+    // Call the function on page load
+    updateViewCount();
 </script>
 </body>
 </html>
