@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Ny Vicheka</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div class="logo">
+      <i class="fas fa-shopping-cart"></i>
+      <span>Ny Vicheka</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="nav-link" data-section="products">ទំព័រដើម</a></li>
+        <li><a href="index.html" class="nav-link" data-section="products">ទំនិញ</a></li>
+        <li><a href="about.html" class="nav-link active">អំពីយើង</a></li>
+        <li><a href="index.html" class="nav-link" data-section="contact">ទំនាក់ទំនង</a></li>
+      </ul>
+    </nav>
+    <div class="user-icon">👤</div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- About Section -->
+    <div class="about-section">
+      <h1>អំពីយើង</h1>
+      <p class="intro-text">ស្វែងយល់បន្ថែមអំពីខ្ញុំ! ខ្ញុំគឺជាអ្នកផ្តល់សេវាកម្មដែលប្តេជ្ញាផ្តល់ជូននូវផលិតផល និងសេវាកម្មល្អបំផុតសម្រាប់អតិថិជន។</p>
+      <div class="team-list">
+        <div class="team-member">
+          <img src="images/profile.jpg" alt="Ny Vicheka">
+          <h3>នី វិច្ឆិកា</h3>
+          <p>អ្នកផ្តល់សេវាកម្ម និងជាម្ចាស់អាជីវកម្ម</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>Email: vicheka.service@gmail.com</p>
+      <p>Phone: 0717944545</p>
+      <div class="social-icons">
+        <a href="#">f</a>
+        <a href="#">✈</a>
+        <a href="#">t</a>
+        <a href="#">▶</a>
+      </div>
+      <a href="https://t.me/ny_vicheka" class="telegram-btn">Join Telegram</a>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Ny Vicheka. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Function to toggle menu for mobile
+    function toggleMenu() {
+      const nav = document.querySelector('nav');
+      nav.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
