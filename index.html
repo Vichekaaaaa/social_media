@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Software Sales - Ny Vicheka</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div class="logo">
+      <i class="fas fa-shopping-cart"></i>
+      <span>Ny Vicheka</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="nav-link active">ទំព័រដើម</a></li>
+        <li><a href="products.html" class="nav-link">ទំនិញ</a></li>
+        <li><a href="about.html" class="nav-link">អំពីយើង</a></li>
+        <li><a href="contact.html" class="nav-link">ទំនាក់ទំនង</a></li>
+      </ul>
+    </nav>
+    <div class="user-icon">👤</div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Welcome Section -->
+    <div class="welcome-section">
+      <img src="./images/banner.jpg" alt="Welcome Banner" class="welcome-banner">
+      <h1>សូមស្វាគមន៍មកកាន់ Ny Vicheka</h1>
+      <p class="intro-text">សួស្តីអតិថិជនជាទីស្រឡាញ់! ខ្ញុំឈ្មោះ នី វិច្ឆិកា និងរីករាយណាស់ដែលបានជួបអ្នកនៅទីនេះ។ សូមស្វែងរកផលិតផលសូហ្វវែរដ៏ល្អបំផុតសម្រាប់តម្រូវការរបស់អ្នក។ ប្រសិនបើអ្នកមានសំណួរណាមួយ សូមកុំស្ទាក់ស្ទើរក្នុងការទាក់ទងខ្ញុំណា!</p>
+      <a href="products.html" class="btn">ស្វែងរកផលិតផលឥឡូវនេះ</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>Email: vicheka.service@gmail.com</p>
+      <p>Phone: 0717944545</p>
+      <div class="social-icons">
+        <a href="#">f</a>
+        <a href="#">✈</a>
+        <a href="#">t</a>
+        <a href="#">▶</a>
+      </div>
+      <a href="https://t.me/ny_vicheka" class="telegram-btn">Join Telegram</a>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Ny Vicheka. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Function to toggle menu for mobile
+    function toggleMenu() {
+      const nav = document.querySelector('nav');
+      nav.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
