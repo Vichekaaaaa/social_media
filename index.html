@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Software Solutions - Ny Vicheka</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Particle Background -->
+  <div id="particles-js"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div class="logo-container">
+      <div class="logo rotate-3d">
+        <i class="fas fa-shopping-cart"></i>
+        <span>Ny Vicheka</span>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="nav-link active">ទំព័រដើម</a></li>
+        <li><a href="products.html" class="nav-link">ទំនិញ</a></li>
+        <li><a href="about.html" class="nav-link">អំពីយើង</a></li>
+        <li><a href="contact.html" class="nav-link">ទំនាក់ទំនង</a></li>
+      </ul>
+    </nav>
+    <div class="user-container">
+      <div class="user-icon pulse" onclick="toggleDropdown()">
+        <i class="fas fa-user"></i>
+      </div>
+      <div class="user-dropdown" id="userDropdown">
+        <a href="#">Profile</a>
+        <a href="#">Settings</a>
+        <a href="#">Logout</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <video autoplay muted loop class="hero-video">
+        <source src="https://via.placeholder.com/1920x1080.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1 class="fade-in-up glow-text">សូមស្វាគមន៍មកកាន់ <span class="highlight">Ny Vicheka</span></h1>
+        <p class="fade-in-up glow-text">ផ្តល់ជូននូវដំណោះស្រាយសូហ្វវែរទំនើបសម្រាប់អាជីវកម្ម ការសិក្សា និងសុវត្ថិភាពទិន្នន័យ។</p>
+        <a href="products.html" class="btn slide-in-up glow-btn">ស្វែងរកផលិតផលឥឡូវនេះ</a>
+      </div>
+    </section>
+
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+      <div class="welcome-content">
+        <div class="welcome-text">
+          <h2 class="fade-in-up">ជួបជាមួយ  វិច្ឆិកា</h2>
+          <p class="intro-text fade-in-up">សួស្តីអតិថិជនជាទីស្រឡាញ់! ខ្ញុំឈ្មោះ នី វិច្ឆិកា ជាអ្នកផ្តល់ដំណោះស្រាយសូហ្វវែរដែលអាចជួយអ្នកស្វែងរកផលិតផលសមស្របសម្រាប់តម្រូវការរបស់អ្នក។</p>
+        </div>
+        <div class="welcome-image parallax">
+          <img src="./images/vicheka1.jpg" alt="Ny Vicheka" class="profile-pic fade-in-up">
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+      <h2 class="fade-in-up">សេវាកម្មរបស់យើង</h2>
+      <div class="services-list">
+        <div class="service-card slide-in-up">
+          <i class="fas fa-briefcase"></i>
+          <h3>គ្រប់គ្រងអាជីវកម្ម</h3>
+          <p>សូហ្វវែរដែលជួយអ្នកគ្រប់គ្រងអាជីវកម្មរបស់អ្នកបានយ៉ាងងាយស្រួល។</p>
+        </div>
+        <div class="service-card slide-in-up" style="animation-delay: 0.2s">
+          <i class="fas fa-book"></i>
+          <h3>ការសិក្សា</h3>
+          <p>ជួយសិស្ស និងគ្រូបង្រៀនក្នុងការសិក្សាប្រកបដោយភាពច្នៃប្រឌិត។</p>
+        </div>
+        <div class="service-card slide-in-up" style="animation-delay: 0.4s">
+          <i class="fas fa-shield-alt"></i>
+          <h3>សុវត្ថិភាពទិន្នន័យ</h3>
+          <p>ការពារទិន្នន័យរបស់អ្នកជាមួយបច្ចេកវិទ្យាទំនើបបំផុត។</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us-section">
+      <h2 class="fade-in-up">ហេតុអ្វីត្រូវជ្រើសរើសយើង?</h2>
+      <div class="why-choose-us-list">
+        <div class="why-choose-us-card slide-in-up">
+          <i class="fas fa-star"></i>
+          <h3>គុណភាពខ្ពស់</h3>
+          <p>ផលិតផលសូហ្វវែរដែលមានគុណភាពខ្ពស់ និងអាចទុកចិត្តបាន។</p>
+        </div>
+        <div class="why-choose-us-card slide-in-up" style="animation-delay: 0.2s">
+          <i class="fas fa-headset"></i>
+          <h3>សេវាកម្មអតិថិជន</h3>
+          <p>ក្រុមការងារដែលត្រៀមជួយអ្នក 24/7 ជាមួយនឹងសេវាកម្មល្អបំផុត។</p>
+        </div>
+        <div class="why-choose-us-card slide-in-up" style="animation-delay: 0.4s">
+          <i class="fas fa-dollar-sign"></i>
+          <h3>តម្លៃសមរម្យ</h3>
+          <p>ផលិតផលដែលមានតម្លៃសមរម្យ សាកសមនឹងគ្រប់ថវិកា។</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Vision Section -->
+    <section class="vision-section">
+      <h2 class="fade-in-up">ចក្ខុវិស័យរបស់យើង</h2>
+      <div class="vision-content">
+        <div class="vision-text slide-in-up">
+          <p>យើងប្តេជ្ញាផ្តល់នូវដំណោះស្រាយសូហ្វវែរដ៏ល្អបំផុតដែលជួយជំរុញកំណើនអាជីវកម្ម លើកកម្ពស់ការអប់រំ និងធានាសុវត្ថិភាពទិន្នន័យ។</p>
+          <p>ចក្ខុវិស័យរបស់យើងគឺក្លាយជាអ្នកផ្តល់សេវាឈានមុខគេនៅក្នុងវិស័យបច្ចេកវិទ្យា ដោយផ្តោតលើនវានុវត្តន៍ និងគុណភាព។</p>
+        </div>
+        <div class="vision-image slide-in-up" style="animation-delay: 0.2s">
+          <img src="https://tse1.mm.bing.net/th/id/OIP.ilosY1WTCTm0bafB7k_8-wHaEZ?rs=1&pid=ImgDetMain">
+        </div>
+      </div>
+    </section>
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+      <h2 class="fade-in-up">ត្រៀមខ្លួនសម្រាប់ដំណោះស្រាយសូហ្វវែរល្អបំផុតហើយឬនៅ?</h2>
+      <a href="contact.html" class="btn slide-in-up">ទាក់ទងឥឡូវនេះ</a>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>Email: vicheka.service@gmail.com</p>
+      <p>Phone: 0717944545</p>
+      <div class="social-icons">
+        <a href="#">f</a>
+        <a href="#">✈</a>
+        <a href="#">t</a>
+        <a href="#">▶</a>
+      </div>
+      <a href="https://t.me/ny_vicheka" class="telegram-btn">Join Telegram</a>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Ny Vicheka. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Particle.js Library -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    // Initialize Particles.js
+    particlesJS('particles-js', {
+      particles: {
+        number: { value: 80, density: { enable: true, value_area: 800 } },
+        color: { value: '#00ddeb' },
+        shape: { type: 'circle' },
+        opacity: { value: 0.5, random: true },
+        size: { value: 3, random: true },
+        line_linked: { enable: true, distance: 150, color: '#00ddeb', opacity: 0.4, width: 1 },
+        move: { enable: true, speed: 2, direction: 'none', random: true, straight: false, out_mode: 'out', bounce: false }
+      },
+      interactivity: {
+        detect_on: 'canvas',
+        events: { onhover: { enable: true, mode: 'grab' }, onclick: { enable: true, mode: 'push' }, resize: true },
+        modes: { grab: { distance: 140, line_linked: { opacity: 0.7 } }, push: { particles_nb: 4 } }
+      },
+      retina_detect: true
+    });
+
+    // Function to toggle menu for mobile
+    function toggleMenu() {
+      const nav = document.querySelector('nav');
+      nav.classList.toggle('active');
+    }
+
+    // Function to toggle user dropdown
+    function toggleDropdown() {
+      const dropdown = document.getElementById('userDropdown');
+      dropdown.classList.toggle('show');
+    }
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(event) {
+      const dropdown = document.getElementById('userDropdown');
+      const userIcon = document.querySelector('.user-icon');
+      if (!userIcon.contains(event.target) && !dropdown.contains(event.target)) {
+        dropdown.classList.remove('show');
+      }
+    });
+
+    // Animation delay for staggered effects
+    document.querySelectorAll('.slide-in-up, .fade-in-up').forEach((el, index) => {
+      el.style.animationDelay = `${index * 0.2}s`;
+    });
+  </script>
+</body>
+</html>
