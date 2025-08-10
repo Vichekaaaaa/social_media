@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ny Vicheka offers affordable software solutions and WordPress development service, including Microsoft Office, Windows, antivirus, and custom website creation.">
+  <meta name="keywords" content="Ny Vicheka, software, WordPress development, Microsoft Office, Windows, antivirus, website service">
+  <meta name="author" content="Ny Vicheka">
+  <title>Service - Ny Vicheka</title>
+  <!-- AOS CSS via CDN -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Font Awesome for Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', 'Noto Sans Khmer', Arial, sans-serif;
+      overflow-x: hidden;
+    }
+    .min-h-screen {
+      min-height: 100vh;
+    }
+    .flex {
+      display: flex;
+    }
+    .justify-center {
+      justify-content: center;
+    }
+    .items-center {
+      align-items: center;
+    }
+    .text-center {
+      text-align: center;
+    }
+    .relative {
+      position: relative;
+    }
+    .overflow-hidden {
+      overflow: hidden;
+    }
+    .absolute {
+      position: absolute;
+    }
+    .inset-0 {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+    .z-0 {
+      z-index: 0;
+    }
+    .z-10 {
+      z-index: 10;
+    }
+    .z-20 {
+      z-index: 20;
+    }
+    .z-30 {
+      z-index: 30;
+    }
+    .bg-gradient-to-br {
+      background: linear-gradient(to bottom right, #f0f9ff, #e0f2fe);
+    }
+    .from-gray-50 {
+      --tw-gradient-from: #f9fafb;
+    }
+    .to-blue-50 {
+      --tw-gradient-to: #eff6ff;
+    }
+    .pt-16 {
+      padding-top: 4rem;
+    }
+    .pb-16 {
+      padding-bottom: 4rem;
+    }
+    .flex-col {
+      flex-direction: column;
+    }
+    .py-20 {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+    .px-4 {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    .text-5xl {
+      font-size: 3rem;
+    }
+    .md\:text-6xl {
+      @media (min-width: 768px) {
+        font-size: 3.75rem;
+      }
+    }
+    .font-bold {
+      font-weight: 700;
+    }
+    .text-gray-800 {
+      color: #1f2937;
+    }
+    .mb-4 {
+      margin-bottom: 1rem;
+    }
+    .text-xl {
+      font-size: 1.25rem;
+    }
+    .md\:text-2xl {
+      @media (min-width: 768px) {
+        font-size: 1.5rem;
+      }
+    }
+    .text-gray-600 {
+      color: #475569;
+    }
+    .mb-6 {
+      margin-bottom: 1.5rem;
+    }
+    .text-blue-600 {
+      color: #2563eb;
+    }
+    .font-semibold {
+      font-weight: 600;
+    }
+    .text-md {
+      font-size: 1rem;
+    }
+    .md\:text-lg {
+      @media (min-width: 768px) {
+        font-size: 1.125rem;
+      }
+    }
+    .text-gray-500 {
+      color: #6b7280;
+    }
+    .max-w-xl {
+      max-width: 36rem;
+    }
+    .mx-auto {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .gap-4 {
+      gap: 1rem;
+    }
+    .px-8 {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+    .py-3 {
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+    }
+    .rounded-lg {
+      border-radius: 0.5rem;
+    }
+    .shadow-lg {
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+    .bg-blue-600 {
+      background-color: #2563eb;
+    }
+    .text-white {
+      color: #fff;
+    }
+    .bg-gray-300 {
+      background-color: #d1d5db;
+    }
+    .py-12 {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+    .w-full {
+      width: 100%;
+    }
+    .max-w-6xl {
+      max-width: 72rem;
+    }
+    .grid {
+      display: grid;
+    }
+    .grid-cols-1 {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    .md\:grid-cols-3 {
+      @media (min-width: 768px) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+    .bg-white\/70 {
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+    .backdrop-blur-sm {
+      backdrop-filter: blur(4px);
+    }
+    .p-6 {
+      padding: 1.5rem;
+    }
+    .rounded-xl {
+      border-radius: 0.75rem;
+    }
+    .shadow-sm {
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    }
+    .border {
+      border-width: 1px;
+    }
+    .border-white\/20 {
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+    .hover\:shadow-md:hover {
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+    .transition-all {
+      transition: all 0.3s ease;
+    }
+    .duration-300 {
+      transition-duration: 300ms;
+    }
+    .text-3xl {
+      font-size: 1.875rem;
+    }
+    .mb-1 {
+      margin-bottom: 0.25rem;
+    }
+    .bg-gradient-to-r {
+      background: linear-gradient(to right, var(--tw-gradient-stops));
+    }
+    .from-blue-50 {
+      --tw-gradient-from: #eff6ff;
+    }
+    .to-indigo-50 {
+      --tw-gradient-to: #eef2ff;
+    }
+    .mt-8 {
+      margin-top: 2rem;
+    }
+    .container {
+      max-width: 1280px;
+    }
+    .max-w-2xl {
+      max-width: 42rem;
+    }
+    .mb-3 {
+      margin-bottom: 0.75rem;
+    }
+    .text-sm {
+      font-size: 0.875rem;
+    }
+    .md\:text-base {
+      @media (min-width: 768px) {
+        font-size: 1rem;
+      }
+    }
+    .max-w-prose {
+      max-width: 65ch;
+    }
+    .leading-normal {
+      line-height: 1.5;
+    }
+    .whitespace-pre-line {
+      white-space: pre-line;
+    }
+    .sm\:flex-row {
+      @media (min-width: 640px) {
+        flex-direction: row;
+      }
+    }
+    .mb-6 {
+      margin-bottom: 1.5rem;
+    }
+    .px-6 {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+    .font-medium {
+      font-weight: 500;
+    }
+    .shadow {
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    }
+    .hover\:shadow-lg:hover {
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+    .hover\:scale-105:hover {
+      transform: scale(1.05);
+    }
+    .transform {
+      transform: translate(0);
+    }
+    .from-blue-600 {
+      --tw-gradient-from: #2563eb;
+    }
+    .to-indigo-600 {
+      --tw-gradient-to: #4f46e5;
+    }
+    .bg-white {
+      background-color: #fff;
+    }
+    .border-gray-200 {
+      border-color: #e5e7eb;
+    }
+    .fixed {
+      position: fixed;
+    }
+    .right-6 {
+      right: 1.5rem;
+    }
+    .bottom-16 {
+      bottom: 4rem;
+    }
+    .gap-4 {
+      gap: 1rem;
+    }
+    .p-3 {
+      padding: 0.75rem;
+    }
+    .rounded-full {
+      border-radius: 9999px;
+    }
+    .transition-all {
+      transition: all 0.3s ease;
+    }
+    .duration-300 {
+      transition-duration: 300ms;
+    }
+    .w-5 {
+      width: 1.25rem;
+    }
+    .h-5 {
+      height: 1.25rem;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header Styles */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: linear-gradient(to right, #2563eb, #4f46e5);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      z-index: 30;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header-logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .header-nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+    .header-nav a {
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    .header-nav a:hover {
+      color: #dbeafe;
+    }
+    .header-nav a.active {
+      color: #bfdbfe;
+      border-bottom: 2px solid #bfdbfe;
+    }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background-color: #fff;
+      margin: 2px 0;
+      transition: all 0.3s ease;
+    }
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -7px);
+    }
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: linear-gradient(to right, #2563eb, #4f46e5);
+      flex-direction: column;
+      padding: 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .dropdown-menu.active {
+      display: flex;
+    }
+    .dropdown-menu a {
+      color: #fff;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    .dropdown-menu a:hover {
+      color: #dbeafe;
+    }
+    .dropdown-menu a.active {
+      color: #bfdbfe;
+      border-bottom: 2px solid #bfdbfe;
+    }
+    @media (max-width: 767px) {
+      .header-nav {
+        display: none;
+      }
+      .hamburger {
+        display: flex;
+      }
+    }
+
+    /* Footer Styles */
+    .footer {
+      background: linear-gradient(to right, #2563eb, #4f46e5);
+      color: #fff;
+      padding: 0.5rem 1rem;
+      width: 100%;
+      z-index: 20;
+      box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      bottom: 0;
+      left: 0;
+    }
+    .footer .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .footer-copyright {
+      font-size: 0.75rem;
+      opacity: 0.8;
+    }
+    @media (min-width: 768px) {
+      .footer-copyright {
+        font-size: 0.875rem;
+      }
+    }
+
+    /* Animation Styles */
+    @keyframes float1 {
+      0%, 100% { transform: translateY(0) translateX(0); }
+      50% { transform: translateY(-20px) translateX(10px); }
+    }
+    @keyframes float2 {
+      0%, 100% { transform: translateY(0) translateX(0); }
+      50% { transform: translateY(15px) translateX(-15px); }
+    }
+    @keyframes float3 {
+      0%, 100% { transform: translateY(0) translateX(0); }
+      50% { transform: translateY(-10px) translateX(-5px); }
+    }
+    .animate-float1 { animation: float1 8s ease-in-out infinite; }
+    .animate-float2 { animation: float2 10s ease-in-out infinite; }
+    .animate-float3 { animation: float3 12s ease-in-out infinite; }
+    .animate-wave {
+      animation: waveMove 6s ease-in-out infinite;
+    }
+    @keyframes waveMove {
+      0% { transform: translateX(0); }
+      50% { transform: translateX(20px); }
+      100% { transform: translateX(0); }
+    }
+    .animate-particles span {
+      position: absolute;
+      background-color: #60a5fa;
+      border-radius: 9999px;
+      opacity: 0.6;
+      animation: particleMove linear infinite;
+    }
+    @keyframes particleMove {
+      0% { transform: translateY(100vh); opacity: 0.6; }
+      50% { opacity: 0.3; }
+      100% { transform: translateY(-100vh); opacity: 0; }
+    }
+    .animate-slide-in {
+      animation: slideIn 1.5s ease-out;
+    }
+    @keyframes slideIn {
+      0% { transform: translateX(-100%); opacity: 0; }
+      100% { transform: translateX(0); opacity: 1; }
+    }
+    @keyframes bounceIn {
+      0% { transform: scale(0); opacity: 0; }
+      50% { transform: scale(1.2); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+    @keyframes rotateIcon {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .animated-icon {
+      animation: bounceIn 0.8s ease-out forwards;
+    }
+    .animated-icon:hover svg {
+      animation: rotateIcon 0.5s ease-in-out;
+    }
+    .animated-icon:hover {
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      transform: scale(1.1);
+    }
+    .bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] {
+      background: radial-gradient(ellipse at center, var(--tw-gradient-stops));
+    }
+    .from-blue-50 {
+      --tw-gradient-from: #eff6ff;
+    }
+    .via-white {
+      --tw-gradient-via: #fff;
+    }
+    .to-blue-50 {
+      --tw-gradient-to: #eff6ff;
+    }
+    .opacity-70 {
+      opacity: 0.7;
+    }
+    .top-1\/4 {
+      top: 25%;
+    }
+    .left-1\/4 {
+      left: 25%;
+    }
+    .w-32 {
+      width: 8rem;
+    }
+    .h-32 {
+      height: 8rem;
+    }
+    .bg-blue-200 {
+      background-color: #bfdbfe;
+    }
+    .opacity-20 {
+      opacity: 0.2;
+    }
+    .blur-xl {
+      filter: blur(24px);
+    }
+    .top-1\/3 {
+      top: 33.333333%;
+    }
+    .right-1\/4 {
+      right: 25%;
+    }
+    .w-40 {
+      width: 10rem;
+    }
+    .h-40 {
+      height: 10rem;
+    }
+    .bg-indigo-200 {
+      background-color: #c7d2fe;
+    }
+    .bottom-1\/4 {
+      bottom: 25%;
+    }
+    .right-1\/3 {
+      right: 33.333333%;
+    }
+    .w-28 {
+      width: 7rem;
+    }
+    .h-28 {
+      height: 7rem;
+    }
+    .bg-sky-200 {
+      background-color: #bae6fd;
+    }
+    .bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDEwIEwgNDAgMTAgTSAxMCAwIEwgMTAgNDAgTSAwIDIwIEwgNDAgMjAgTSAyMCAwIEwgMjAgNDAgTSAwIDMwIEwgNDAgMzAgTSAzMCAwIEwgMzAgNDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyMTUsIDIxNSwgMjQyLCAwLjEpIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] {
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDEwIEwgNDAgMTAgTSAxMCAwIEwgMTAgNDAgTSAwIDIwIEwgNDAgMjAgTSAyMCAwIEwgMjAgNDAgTSAwIDMwIEwgNDAgMzAgTSAzMCAwIEwgMzAgNDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyMTUsIDIxNSwgMjQyLCAwLjEpIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=');
+    }
+    .opacity-30 {
+      opacity: 0.3;
+    }
+    .animate-wave {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23d1e7ff' fill-opacity='0.4' d='M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,85.3C672,75,768,85,864,106.7C960,128,1056,160,1152,176C1248,192,1344,192,1392,192L1440,192V320H1392H1344H1244H1152H1056H960H864H768H672H576H480H384H288H192H96H48H0V64Z'/%3E%3C/svg%3E");
+      background-repeat: repeat-x;
+      background-position: bottom;
+      background-size: 100% 100%;
+      height: 100%;
+      width: 100%;
+    }
+    .animate-particles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .animate-particles span {
+      display: block;
+    }
+
+    /* Custom styles for Floating Social Links */
+    .social-links {
+      gap: 1rem;
+    }
+    .social-links a {
+      opacity: 0.6;
+    }
+
+    /* Service Specific Styles */
+    .content-wrapper {
+      width: 50%;
+      min-width: 300px; /* Prevent content from becoming too narrow on small screens */
+      margin: 0 auto;
+    }
+    .gap-6 {
+      gap: 1.5rem;
+    }
+    .mb-12 {
+      margin-bottom: 3rem;
+    }
+    .text-4xl {
+      font-size: 2.25rem;
+    }
+    .md\:text-5xl {
+      @media (min-width: 768px) {
+        font-size: 3rem;
+      }
+    }
+    .text-gray-700 {
+      color: #374151;
+    }
+    .leading-relaxed {
+      line-height: 1.625;
+    }
+    .max-w-5xl {
+      max-width: 64rem;
+    }
+    .space-y-2 > * + * {
+      margin-top: 0.5rem;
+    }
+    .flex-shrink-0 {
+      flex-shrink: 0;
+    }
+    .bg-gray-100 {
+      background-color: #f3f4f6;
+    }
+    .hover\:bg-gray-200:hover {
+      background-color: #e5e7eb;
+    }
+    .space-x-4 > * + * {
+      margin-left: 1rem;
+    }
+    .text-2xl {
+      font-size: 1.5rem;
+    }
+    .service-category img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .service-list, .services-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .intro-text {
+      font-size: 1.1rem;
+      color: #475569;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    /* Responsive Adjustments */
+    @media (max-width: 1024px) {
+      .content-wrapper {
+        width: 70%;
+      }
+    }
+    @media (max-width: 768px) {
+      .content-wrapper {
+        width: 85%;
+      }
+      .text-5xl {
+        font-size: 2.5rem;
+      }
+      .md\:text-6xl {
+        font-size: 3rem;
+      }
+      .text-4xl {
+        font-size: 2rem;
+      }
+      .text-2xl {
+        font-size: 1.25rem;
+      }
+      .service-category img {
+        height: 120px;
+      }
+    }
+    @media (max-width: 480px) {
+      .content-wrapper {
+        width: 95%;
+        min-width: 280px;
+      }
+      .text-5xl {
+        font-size: 2rem;
+      }
+      .md\:text-6xl {
+        font-size: 2.5rem;
+      }
+      .text-4xl {
+        font-size: 1.75rem;
+      }
+      .text-2xl {
+        font-size: 1.1rem;
+      }
+      .service-category img {
+        height: 100px;
+      }
+      .py-20 {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+      }
+      .py-12 {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+    }
+    /* Button Styles */
+    .btn {
+      padding: 0.75rem 1.5rem;
+      background: linear-gradient(to right, #2563eb, #4f46e5);
+      color: #fff;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      margin: 0 0.5rem;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <a href="/index.html" class="header-logo">NY VICHEKA</a>
+    <div class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="header-nav">
+      <a href="/index.html">Home</a>
+      <a href="/service.html" class="active">Service</a>
+      <a href="/about.html">About Us</a>
+      <a href="/contact.html">Contact Us</a>
+    </nav>
+    <div class="dropdown-menu">
+      <a href="/index.html">Home</a>
+      <a href="/service.html" class="active">Service</a>
+      <a href="/about.html">About Us</a>
+      <a href="/contact.html">Contact Us</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 pt-16 pb-16 flex flex-col relative overflow-hidden">
+    <!-- Combined Background -->
+    <div class="absolute inset-0 z-0">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-50 via-white to-blue-50 opacity-70"></div>
+      <div class="absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-blue-200 opacity-20 blur-xl animate-float1"></div>
+      <div class="absolute top-1/3 right-1/4 w-40 h-40 rounded-full bg-indigo-200 opacity-20 blur-xl animate-float2"></div>
+      <div class="absolute bottom-1/4 right-1/3 w-28 h-28 rounded-full bg-sky-200 opacity-20 blur-xl animate-float3"></div>
+      <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDEwIEwgNDAgMTAgTSAxMCAwIEwgMTAgNDAgTSAwIDIwIEwgNDAgMjAgTSAyMCAwIEwgMjAgNDAgTSAwIDMwIEwgNDAgMzAgTSAzMCAwIEwgMzAgNDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyMTUsIDIxNSwgMjQyLCAwLjEpIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-30"></div>
+      <div class="animate-wave"></div>
+      <div class="absolute inset-0 z-0 animate-particles">
+        <span style="width: 3px; height: 3px; top: 10%; left: 20%; animation-delay: 0s; animation-duration: 15s;"></span>
+        <span style="width: 4px; height: 4px; top: 30%; left: 40%; animation-delay: 1s; animation-duration: 12s;"></span>
+        <span style="width: 2px; height: 2px; top: 50%; left: 60%; animation-delay: 2s; animation-duration: 18s;"></span>
+        <span style="width: 5px; height: 5px; top: 70%; left: 80%; animation-delay: 3s; animation-duration: 10s;"></span>
+        <span style="width: 3px; height: 3px; top: 90%; left: 10%; animation-delay: 4s; animation-duration: 14s;"></span>
+        <span style="width: 4px; height: 4px; top: 15%; left: 35%; animation-delay: 0.5s; animation-duration: 16s;"></span>
+        <span style="width: 2px; height: 2px; top: 25%; left: 55%; animation-delay: 1.5s; animation-duration: 11s;"></span>
+        <span style="width: 5px; height: 5px; top: 45%; left: 75%; animation-delay: 2.5s; animation-duration: 13s;"></span>
+        <span style="width: 3px; height: 3px; top: 65%; left: 95%; animation-delay: 3.5s; animation-duration: 17s;"></span>
+        <span style="width: 4px; height: 4px; top: 85%; left: 5%; animation-delay: 4.5s; animation-duration: 19s;"></span>
+        <span style="width: 2px; height: 2px; top: 5%; left: 25%; animation-delay: 0.2s; animation-duration: 20s;"></span>
+        <span style="width: 5px; height: 5px; top: 35%; left: 45%; animation-delay: 1.2s; animation-duration: 9s;"></span>
+        <span style="width: 3px; height: 3px; top: 55%; left: 65%; animation-delay: 2.2s; animation-duration: 15s;"></span>
+        <span style="width: 4px; height: 4px; top: 75%; left: 85%; animation-delay: 3.2s; animation-duration: 12s;"></span>
+        <span style="width: 2px; height: 2px; top: 95%; left: 15%; animation-delay: 4.2s; animation-duration: 18s;"></span>
+        <span style="width: 5px; height: 5px; top: 20%; left: 30%; animation-delay: 0.8s; animation-duration: 10s;"></span>
+        <span style="width: 3px; height: 3px; top: 40%; left: 50%; animation-delay: 1.8s; animation-duration: 14s;"></span>
+        <span style="width: 4px; height: 4px; top: 60%; left: 70%; animation-delay: 2.8s; animation-duration: 16s;"></span>
+        <span style="width: 2px; height: 2px; top: 80%; left: 90%; animation-delay: 3.8s; animation-duration: 11s;"></span>
+        <span style="width: 5px; height: 5px; top: 0%; left: 0%; animation-delay: 4.8s; animation-duration: 13s;"></span>
+      </div>
+    </div>
+
+    <!-- Software for Sale Section -->
+    <section class="py-12 px-4 relative z-10 content-wrapper" data-aos="fade-up" data-aos-delay="400">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6 text-center">Software Service</h2>
+      <p class="intro-text">ប្រសិនបើបងប្អូនមានតម្រូវការអាចទាក់ទងមកខាងខ្ញុំបាន</p>
+      <div class="service-list">
+        <div class="service-category bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm border border-white/20 hover:shadow-md transition-all duration-300" data-aos="zoom-in" data-aos-delay="500">
+          <img src="./images/offices.jpg" alt="Microsoft Office logo">
+          <div class="service-content">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Microsoft Office</h3>
+            <ul class="space-y-2">
+              <li>Office 2010 = $5 (ប្រើបានរហូត)</li>
+              <li>Office 2013 = $5 (ប្រើបានរហូត)</li>
+              <li>Office 2016 = $5 (ប្រើបានរហូត)</li>
+              <li>Office 2019 = $5 (ប្រើបានរហូត)</li>
+              <li>Office 2021 = $8 (ប្រើបានរហូត)</li>
+              <li>Microsoft 365 = $10</li>
+              <li>Microsoft 365 Personal = $15</li>
+            </ul>
+          </div>
+        </div>
+        <div class="service-category bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm border border-white/20 hover:shadow-md transition-all duration-300" data-aos="zoom-in" data-aos-delay="600">
+          <img src="./images/windowns.jpg" alt="Windows operating system logo">
+          <div class="service-content">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Windows</h3>
+            <ul class="space-y-2">
+              <li>Windows 7 = $5 (ប្រើបានរហូត)</li>
+              <li>Windows 8 = $5 (ប្រើបានរហូត)</li>
+              <li>Windows 10 = $5 (ប្រើបានរហូត)</li>
+              <li>Windows 11 = $5 (ប្រើបានរហូត)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="service-category bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm border border-white/20 hover:shadow-md transition-all duration-300" data-aos="zoom-in" data-aos-delay="700">
+          <img src="./images/antivirus.jpg" alt="Kaspersky antivirus logo">
+          <div class="service-content">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Antivirus</h3>
+            <ul class="space-y-2">
+              <li>Kaspersky = $10</li>
+            </ul>
+          </div>
+        </div>
+        <div class="service-category bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm border border-white/20 hover:shadow-md transition-all duration-300" data-aos="zoom-in" data-aos-delay="800">
+          <img src="./images/videodesign.jpg" alt="Video and design software icon">
+          <div class="service-content">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Video & Design</h3>
+            <ul class="space-y-2">
+              <li>Adobe CC (1 year) = $80</li>
+              <li>Youtube Premium (1 year) = $15</li>
+              <li>Canva Pro (1 year) = $5</li>
+              <li>Capcut Pro (1 year) = $15</li>
+              <li>Acrobat DC = $5</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WordPress Development Service Section -->
+    <section class="py-12 px-4 relative z-10 content-wrapper" data-aos="fade-up" data-aos-delay="900">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6 text-center">WordPress Development Service</h2>
+      <p class="intro-text">ខ្ញុំផ្តល់ជូននូវសេវាកម្មអភិវឌ្ឍន៍គេហទំព័រដោយប្រើប្រាស់ WordPress ដែលមានគុណភាពខ្ពស់ និងតម្លៃសមរម្យ។ សូមទាក់ទងខ្ញុំសម្រាប់តម្រូវការគេហទំព័ររបស់អ្នក!</p>
+      <div class="services-content">
+        <div class="service-category bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm border border-white/20 hover:shadow-md transition-all duration-300" data-aos="zoom-in" data-aos-delay="1000">
+          <h3 class="text-2xl font-semibold text-gray-800 mb-4">WordPress Website Creation</h3>
+          <ul class="space-y-2">
+            <li>Basic Business Website = $50 (រួមបញ្ចូលការរចនា និងដំឡើង)</li>
+            <li>E-commerce Website (WooCommerce) = $80 (រួមបញ្ចូលការទូទាត់ប្រាក់)</li>
+            <li>Blog or Portfolio Website = $40</li>
+          </ul>
+        </div>
+        <div class="service-category bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm border border-white/20 hover:shadow-md transition-all duration-300" data-aos="zoom-in" data-aos-delay="1100">
+          <h3 class="text-2xl font-semibold text-gray-800 mb-4">Theme Customization</h3>
+          <ul class="space-y-2">
+            <li>Basic Theme Customization = $30</li>
+            <li>Advanced Theme Customization = $60 (រួមបញ្ចូលការរចនាផ្ទាល់ខ្លួន)</li>
+            <li>Custom WordPress Theme Development = $100</li>
+          </ul>
+        </div>
+        <div class="service-category bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm border border-white/20 hover:shadow-md transition-all duration-300" data-aos="zoom-in" data-aos-delay="1200">
+          <h3 class="text-2xl font-semibold text-gray-800 mb-4">Plugin Development</h3>
+          <ul class="space-y-2">
+            <li>Custom Plugin Development = $80</li>
+            <li>Plugin Installation & Setup = $20</li>
+            <li>Premium Plugin Licenses:</li>
+            <ul class="space-y-2 pl-4">
+              <li>Elementor Pro (1 year) = $10</li>
+              <li>WP Rocket (1 year) = $8</li>
+              <li>Yoast SEO Premium (1 year) = $5</li>
+            </ul>
+          </ul>
+        </div>
+        <div class="service-category bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm border border-white/20 hover:shadow-md transition-all duration-300" data-aos="zoom-in" data-aos-delay="1300">
+          <h3 class="text-2xl font-semibold text-gray-800 mb-4">SEO Optimization</h3>
+          <ul class="space-y-2">
+            <li>On-Page SEO Setup = $25</li>
+            <li>Full SEO Optimization (with Yoast) = $50</li>
+            <li>Monthly SEO Maintenance = $15/month</li>
+          </ul>
+        </div>
+        <div class="service-category bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm border border-white/20 hover:shadow-md transition-all duration-300" data-aos="zoom-in" data-aos-delay="1400">
+          <h3 class="text-2xl font-semibold text-gray-800 mb-4">Website Maintenance</h3>
+          <ul class="space-y-2">
+            <li>Monthly Maintenance (Updates & Backups) = $20/month</li>
+            <li>Security Enhancements = $30</li>
+            <li>Performance Optimization = $25</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Buttons Section -->
+    <div class="py-8 text-center content-wrapper" data-aos="fade-up" data-aos-delay="1500">
+      <a href="/about.html" class="btn">About Us</a>
+      <a href="/contact.html" class="btn">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer" data-aos="fade-up" data-aos-delay="700">
+    <div class="container mx-auto px-4">
+      <p class="footer-copyright">© 2025 NY VICHEKA. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Floating Social Links -->
+  <div class="fixed right-6 bottom-16 z-20 flex flex-col gap-4 social-links">
+    <a href="https://www.linkedin.com/in/ny-vicheka" target="_blank" rel="noopener noreferrer" class="bg-blue-700 text-white p-3 rounded-full shadow-lg animated-icon transform transition-all duration-300" data-aos="zoom-in" data-aos-delay="800" aria-label="LinkedIn">
+      <svg class="w-5 h-5" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-1.337-.255-2.391-1.875-2.391-1.625 0-1.875 1.355-1.875 2.391v5.604h-3v-11h3v1.543c.5-.767 1.332-1.874 3.25-1.874 2.393 0 4.125 1.896 4.125 5.979v6.352z"/>
+      </svg>
+    </a>
+    <a href="https://github.com/Vichekaaaaa" target="_blank" rel="noopener noreferrer" class="bg-gray-800 text-white p-3 rounded-full shadow-lg animated-icon transform transition-all duration-300" data-aos="zoom-in" data-aos-delay="900" aria-label="GitHub">
+      <svg class="w-5 h-5" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+      </svg>
+    </a>
+    <a href="https://t.me/ny_vicheka" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white p-3 rounded-full shadow-lg animated-icon transform transition-all duration-300" data-aos="zoom-in" data-aos-delay="1000" aria-label="Telegram">
+      <svg class="w-5 h-5" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.79L12.6 16.3l-2.82 2.35z"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,
+      once: false,
+      mirror: true,
+    });
+    function toggleMenu() {
+      const hamburger = document.querySelector('.hamburger');
+      const dropdownMenu = document.querySelector('.dropdown-menu');
+      hamburger.classList.toggle('active');
+      dropdownMenu.classList.toggle('active');
+      // Close menu when clicking a link
+      document.querySelectorAll('.dropdown-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          dropdownMenu.classList.remove('active');
+        });
+      });
+    }
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      const hamburger = document.querySelector('.hamburger');
+      const dropdownMenu = document.querySelector('.dropdown-menu');
+      if (!hamburger.contains(e.target) && !dropdownMenu.contains(e.target)) {
+        hamburger.classList.remove('active');
+        dropdownMenu.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>
