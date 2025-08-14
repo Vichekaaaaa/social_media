@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NY VICHEKA - Portfolio</title>
+  <title>NY VICHEKA - Projects</title>
   <!-- AOS CSS via CDN -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
+    /* [Previous CSS styles remain unchanged] */
     /* Reset and base styles */
     * {
       margin: 0;
@@ -179,12 +180,17 @@
     .grid {
       display: grid;
     }
-    .grid-cols-2 {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+    .grid-cols-1 {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
     }
-    .md\:grid-cols-4 {
+    .md\:grid-cols-2 {
       @media (min-width: 768px) {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+    .lg\:grid-cols-3 {
+      @media (min-width: 1024px) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
       }
     }
     .bg-white\/70 {
@@ -558,61 +564,6 @@
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
-    .playful-button2:first-child {
-  background: linear-gradient(90deg, #ec4899, #f472b6, #f9a8d4, #ec4899);
-  background-size: 400%;
-  animation: colorRunPlayful 5s infinite;
-}
-
-.playful-button2:last-child {
-  background: linear-gradient(90deg, #ec4899, #f472b6, #f9a8d4, #ec4899);
-  background-size: 400%;
-  animation: colorRunPlayful 5s infinite;
-}
-
-/* Existing animations (ensure these are present) */
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
-}
-
-@keyframes colorRunPlayful {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-  .playful-button3 {
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: pulse 2s infinite;
-}
-
-.playful-button3:first-child {
-  background: linear-gradient(90deg, #3b82f6, #60a5fa, #93c5fd, #3b82f6);
-  background-size: 400%;
-  animation: colorRunPlayful 5s infinite;
-}
-
-.playful-button3:last-child {
-  background: linear-gradient(90deg, #3b82f6, #60a5fa, #93c5fd, #3b82f6);
-  background-size: 400%;
-  animation: colorRunPlayful 5s infinite;
-}
-
-/* Existing animations (ensure these are present) */
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
-}
-
-@keyframes colorRunPlayful {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
     .animated-icon {
       animation: bounceIn 0.8s ease-out forwards;
     }
@@ -721,28 +672,85 @@
     .social-links a {
       opacity: 0.6;
     }
+
+    /* Project Card Styles */
+    .project-card {
+      background-color: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(8px);
+      border-radius: 1rem;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+    .project-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .project-content {
+      padding: 1.5rem;
+    }
+    .project-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #1f2937;
+      margin-bottom: 0.5rem;
+    }
+    .project-description {
+      font-size: 1rem;
+      color: #475569;
+      margin-bottom: 1rem;
+    }
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .project-tag {
+      background-color: #eff6ff;
+      color: #2563eb;
+      padding: 0.25rem 0.75rem;
+      border-radius: 1rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #2563eb;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    .project-link:hover {
+      color: #1e40af;
+    }
   </style>
 </head>
 <body>
   <!-- Header -->
   <header class="header">
-    <a href="#" class="header-logo">NY VICHEKA</a>
+    <a href="index.html" class="header-logo">NY VICHEKA</a>
     <div class="hamburger" onclick="toggleMenu()">
       <span></span>
       <span></span>
       <span></span>
     </div>
     <nav class="header-nav">
-      <a href="index.html" class="active">Home</a>
+      <a href="index.html">Home</a>
       <a href="service.html">Service</a>
-      <a href="projects.html">Projects</a>
+      <a href="projects.html" class="active">Projects</a>
       <a href="about.html">About Us</a>
       <a href="contact.html">Contact Us</a>
     </nav>
     <div class="dropdown-menu">
-      <a href="index.html" class="active">Home</a>
+      <a href="index.html">Home</a>
       <a href="service.html">Service</a>
-      <a href="projects.html">Projects</a>
+      <a href="projects.html" class="active">Projects</a>
       <a href="about.html">About Us</a>
       <a href="contact.html">Contact Us</a>
     </div>
@@ -782,43 +790,34 @@
       </div>
     </div>
 
-    <!-- Refined Hero Section -->
-    <header class="py-20 px-4 relative z-10" data-aos="fade-up" data-aos-delay="200" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'" style="transition: transform 0.3s ease;">
-      <h1 class="text-5xl md:text-6xl font-bold text-gray-800 mb-4">NY VICHEKA</h1>
-      <p class="text-xl md:text-2xl text-gray-600 mb-6">
-        I'm a <span class="typed text-blue-600 font-semibold"></span>
+    <!-- Projects Section -->
+    <section class="py-20 px-4 w-full max-w-6xl mx-auto relative z-10" data-aos="fade-up" data-aos-delay="200">
+      <h1 class="text-5xl md:text-6xl font-bold text-gray-800 mb-4">My Projects</h1>
+      <p class="text-xl md:text-2xl text-gray-600 mb-6 max-w-2xl mx-auto">
+        Explore my work, showcasing creativity, functionality, and innovation in e-commerce.
       </p>
-      <p class="text-md md:text-lg text-gray-500 mb-6 max-w-xl mx-auto animate-slide-in">
-        Crafting beautiful and functional web experiences with passion, precision, and a touch of creativity.
-      </p>
-      <div class="flex justify-center gap-4">
-        <a href="service.html" class="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-lg playful-button relative z-10" data-aos="slide-right" data-aos-delay="300">
-          View Service
-        </a>
-        <a href="contact.html" class="px-8 py-3 bg-gray-300 text-gray-800 font-semibold rounded-lg shadow-lg playful-button relative z-10" data-aos="slide-left" data-aos-delay="400">
-          Contact Us
-        </a>
-      </div>
-    </header>
-
-    <!-- Stats Section -->
-    <section class="py-12 w-full max-w-6xl mx-auto px-4 relative z-10" data-aos="fade-up" data-aos-delay="400">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div class="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm border border-white/20 hover:shadow-md transition-all duration-300" data-aos="zoom-in" data-aos-delay="500">
-          <p class="text-3xl font-bold text-blue-600 mb-1">10+</p>
-          <p class="text-gray-600">Projects Completed</p>
-        </div>
-        <div class="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm border border-white/20 hover:shadow-md transition-all duration-300" data-aos="zoom-in" data-aos-delay="600">
-          <p class="text-3xl font-bold text-blue-600 mb-1">5+</p>
-          <p class="text-gray-600">Years Experience</p>
-        </div>
-        <div class="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm border border-white/20 hover:shadow-md transition-all duration-300" data-aos="zoom-in" data-aos-delay="700">
-          <p class="text-3xl font-bold text-blue-600 mb-1">20+</p>
-          <p class="text-gray-600">Happy Clients</p>
-        </div>
-        <div class="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm border border-white/20 hover:shadow-md transition-all duration-300" data-aos="zoom-in" data-aos-delay="800">
-          <p class="text-3xl font-bold text-blue-600 mb-1">100%</p>
-          <p class="text-gray-600">Satisfaction</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Project 1: E-Commerce WordPress Website -->
+        <div class="project-card" data-aos="zoom-in" data-aos-delay="300">
+          <img src="https://vicheka2.github.io/freeimage/images/wordpress1.png" alt="E-Commerce Website" class="project-image">
+          <div class="project-content">
+            <h2 class="project-title">E-Commerce WordPress Website</h2>
+            <p class="project-description">
+              A fully functional e-commerce website built with WordPress, featuring WooCommerce integration, product listings, secure payment gateways, and a responsive design for seamless shopping experiences.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">WordPress</span>
+              <span class="project-tag">WooCommerce</span>
+              <span class="project-tag">PHP</span>
+              <span class="project-tag">CSS</span>
+            </div>
+            <a href="http://vicheka.infinityfreeapp.com" target="_blank" class="project-link">
+              View Project
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 010-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -828,20 +827,24 @@
       <div class="container mx-auto px-4">
         <div class="max-w-2xl mx-auto text-center">
           <h2 class="text-xl md:text-2xl font-semibold text-gray-800 mb-3">
-            Ready to Bring Your Vision to Life?
+            Want to Collaborate on a Project?
           </h2>
           <p class="text-sm md:text-base text-gray-600 mb-6 max-w-prose mx-auto leading-normal whitespace-pre-line">
-            Let's collaborate to create something extraordinary. Whether you need a stunning website, a brand refresh, or custom digital solutions, I'm here to help.
+            Let's work together to create something amazing. Reach out to discuss your ideas or explore my services.
           </p>
           <div class="flex flex-col sm:flex-row justify-center gap-4 mb-6">
-            <a href="projects.html" class="px-6 py-3 bg-blue-700 text-black font-semibold  playful-button2  rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 transform">
-              View Project
-            </a>
-            <a href="about.html" class="px-6 py-3 bg-amber-400 text-gray-900 font-medium playful-button3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 transform flex items-center justify-center gap-2">
+            <a href="service.html" class="px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-black font-medium rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 transform flex items-center justify-center gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+                <path fill-rule="evenodd" d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z" clip-rule="evenodd" />
               </svg>
-              About Us
+              View Service
+            </a>
+            <a href="contact.html" class="px-6 py-3 bg-white text-gray-800 font-medium rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 transform border border-gray-200 flex items-center justify-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+              </svg>
+              Contact Us
             </a>
           </div>
         </div>
@@ -876,22 +879,12 @@
   </div>
 
   <!-- Scripts -->
-  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({
       duration: 1200,
       once: false,
       mirror: true,
-    });
-    var typed = new Typed('.typed', {
-      strings: ['UI/UX Designer', 'Web Developer', 'Freelancer'],
-      typeSpeed: 100,
-      backSpeed: 50,
-      backDelay: 2000,
-      loop: true,
-      showCursor: true,
-      cursorChar: '|',
     });
     function toggleMenu() {
       const hamburger = document.querySelector('.hamburger');
